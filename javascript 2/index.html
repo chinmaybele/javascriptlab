@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stranger Things Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Stranger Things Shopping Cart</h1>
+  </header>
+
+  <main>
+    <!-- Product Section -->
+    <section class="products">
+      <h2>Products</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="https://www.foodandwine.com/thmb/240GPCLI6pw6To1oBq-u7sJc5hI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/eggo-stranger-things-vanilla-bliss-minis-FT-BLOG1017-fd20dfa7649f49b2a6dda999c429b792.jpg" alt="eggo">
+          <h3>eggo</h3>
+          <p>₹70</p>
+          <button onclick="addToCart('eggo', 70)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://content.instructables.com/F1J/7DG1/IUDWFWU4/F1J7DG1IUDWFWU4.jpg?auto=webp&fit=bounds&frame=1&height=620&width=620" alt="lights">
+          <h3>lights</h3>
+          <p>₹100</p>
+          <button onclick="addToCart('lights', 100)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://i.pinimg.com/originals/1a/2e/7d/1a2e7d6f9aec1eaa1e1c100adbabec3c.jpg" alt="Baseball Bat">
+          <h3>Baseball Bat</h3>
+          <p>₹700</p>
+          <button onclick="addToCart('BaseBall Bat', 700)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="https://p.turbosquid.com/ts-thumb/ER/UrhAoc/Ab/1469191_2/jpg/1637316028/600x600/fit_q87/0929a6393c4eed3f1829e6bcd1cc39289c7323f5/1469191_2.jpg" alt="Walkie Talkie">
+          <h3>Walkie Talkie</h3>
+          <p>₹400</p>
+          <button onclick="addToCart('Walkie Talki', 400)">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+          <img src="<div class="product-card">
+          <img src="https://m.media-amazon.com/images/I/81YjxIYu2gL._SX679_.jpg" alt="Bycycle">
+          <h3>Bycycle</h3>
+          <p>₹400</p>
+          <button onclick="addToCart('Bycycle', 4000)">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart">
+      <h2>Your Cart</h2>
+      <div id="cart-items"><p>Your cart is empty</p></div>
+
+      <div class="bill-summary">
+        <p>Subtotal: ₹<span id="subtotal">0.00</span></p>
+        <p>Tax (18%): ₹<span id="tax">0.00</span></p>
+        <h3>Total: ₹<span id="total">0.00</span></h3>
+      </div>
+
+      <div class="cart-actions">
+        <button class="clear-btn" onclick="clearCart()">Clear Cart</button>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+      </div>
+      <div class="discount-section">
+        <input type="text" id="discount-code" placeholder="Enter discount code">
+        <button onclick="applyDiscount()">Apply</button>
+         <p id="discount-msg"></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

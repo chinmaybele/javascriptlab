@@ -1,0 +1,9 @@
+/* Custom font for a professional look */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f4f8;
+}
+
+/* Note: Most styling is handled via Tailwind CSS classes in the HTML file. */
+/* This CSS file is provided just for the required structure. */

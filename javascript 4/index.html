@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Palindrome Checker — Reverse Number</title>
+
+  <!-- Tab Icon -->
+  <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <rect width='100' height='100' rx='18' fill='%238259f5'/>
+      <text x='50' y='62' font-size='40' text-anchor='middle' fill='white'>🔄</text>
+    </svg>">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Palindrome Checker</h1>
+      <label for="numInput" class="hint">Enter a number to check if it’s a palindrome</label>
+      <input id="numInput" type="number" placeholder="e.g. 121 or 12321" autocomplete="off">
+
+      <div class="button-row">
+        <button id="reverseBtn" class="btn neutral-btn" type="button">Reverse</button>
+        <button id="checkBtn" class="btn check-btn" type="button">Check Palindrome</button>
+      </div>
+
+      <div id="steps" class="steps"></div>
+      <div id="result" class="result"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

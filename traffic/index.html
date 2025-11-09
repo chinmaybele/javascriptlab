@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Traffic Signal Simulator</title>
+  <link rel="stylesheet" href="traffic.css" />
+</head>
+<body>
+  <main class="stage" role="main" aria-labelledby="title">
+    <header class="header">
+      <h1 id="title">Traffic Signal Simulator</h1>
+      <p class="subtitle">DOM-driven, configurable traffic light with realistic timing & alerts.</p>
+    </header>
+
+    <section class="simulator" aria-label="Traffic signal simulator">
+      <div class="signal" id="signal" aria-live="polite" aria-atomic="true">
+        <div class="lamp lamp-red" id="lamp-red" data-state="off" aria-label="Red light"></div>
+        <div class="lamp lamp-yellow" id="lamp-yellow" data-state="off" aria-label="Yellow light"></div>
+        <div class="lamp lamp-green" id="lamp-green" data-state="off" aria-label="Green light"></div>
+      </div>
+
+      <div class="info">
+        <div class="ring-wrap">
+          <svg class="progress-ring" width="120" height="120">
+            <circle class="ring-bg" stroke-width="8" r="52" cx="60" cy="60"></circle>
+            <circle class="ring-fg" stroke-width="8" r="52" cx="60" cy="60"></circle>
+          </svg>
+          <div class="countdown" id="countdown">--</div>
+        </div>
+
+        <div class="controls">
+          <div class="timers">
+            <label>Green (s) <input id="t-green" type="number" min="1" value="6"></label>
+            <label>Yellow (s) <input id="t-yellow" type="number" min="1" value="3"></label>
+            <label>Red (s) <input id="t-red" type="number" min="1" value="6"></label>
+          </div>
+
+          <div class="buttons">
+            <button id="startBtn" class="btn btn-primary">Start</button>
+            <button id="pauseBtn" class="btn">Pause</button>
+            <button id="resetBtn" class="btn">Reset</button>
+            <button id="prevBtn" class="btn">Prev</button>
+            <button id="nextBtn" class="btn">Next</button>
+          </div>
+
+          <div class="extras">
+            <button id="pedBtn" class="btn btn-ped">Pedestrian</button>
+            <label class="switch">
+              <input id="alertToggle" type="checkbox" />
+              <span class="slider"></span>
+              <span class="label-text">Browser alert</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <footer class="footer">
+      <small>Made with DOM & JS — realistic timing, manual override, and accessible labels.</small>
+    </footer>
+  </main>
+
+  <script src="traffic.js"></script>
+</body>
+</html>

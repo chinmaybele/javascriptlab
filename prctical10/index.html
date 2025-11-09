@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Student Records Table</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" href="practical_10.css">
+</head>
+<body class="min-h-screen p-4 md:p-8">
+    
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">
+            Student Records
+        </h2>
+        <p class="text-center text-gray-500 mb-8">
+            Data dynamically loaded from a JavaScript object (mock API/JSON).
+        </p>
+
+        <!-- Table Container -->
+        <div class="bg-white shadow-xl rounded-xl overflow-hidden">
+            <table id="studentTable" class="min-w-full divide-y divide-gray-200">
+                <!-- Table Header -->
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Age</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Course</th>
+                    </tr>
+                </thead>
+                <!-- Table Body - Populated by JS -->
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <!-- Data rows go here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Loading/Error Message -->
+        <p id="statusMessage" class="mt-4 text-center text-sm text-gray-600">Loading student data...</p>
+
+    </div>
+
+    <!-- Link the external JavaScript file -->
+    <script src="practical_10.js" type="module"></script>
+</body>
+</html>

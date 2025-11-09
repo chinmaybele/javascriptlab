@@ -1,0 +1,125 @@
+/* background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #c2e9fb 0%, #a1c4fd 40%, #d4a1fd 100%);
+  background-size: 400% 400%;
+  animation: gradientBG 18s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* card */
+.card {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  width: 420px;
+  text-align: center;
+}
+
+/* heading */
+h1 {
+  margin-bottom: 15px;
+  color: #4b0082;
+}
+
+/* input */
+input {
+  width: 90%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #7a42f4;
+  margin-bottom: 20px;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+input:focus {
+  border-color: #4b0082;
+  box-shadow: 0 0 12px rgba(75,0,130,0.4);
+}
+
+/* buttons */
+.button-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.neutral-btn {
+  background: linear-gradient(135deg, #ece9ff, #d5c6f9);
+  color: #4b0082;
+}
+.neutral-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(75,0,130,0.2);
+}
+.check-btn {
+  background: linear-gradient(135deg, #7a42f4, #4b0082);
+  color: white;
+}
+.check-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(75,0,130,0.4);
+}
+
+/* steps visualization */
+.steps {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.digit {
+  background: #f3ecff;
+  border: 2px solid #7a42f4;
+  padding: 10px;
+  min-width: 40px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  animation: popIn 0.4s ease forwards;
+  opacity: 0;
+  transform: scale(0.8);
+}
+@keyframes popIn {
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* result */
+.result {
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f9f5ff;
+  border: 1px solid #ddd;
+}
+.result.success {
+  background: #e9fbe9;
+  color: #1b5e20;
+  font-weight: bold;
+}
+.result.fail {
+  background: #ffeaea;
+  color: #b71c1c;
+  font-weight: bold;
+}

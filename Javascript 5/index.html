@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arrays & Loops — Min / Max Visualizer</title>
+
+  <!-- simple SVG favicon -->
+  <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+      <rect width='100' height='100' rx='18' fill='%230077cc'/>
+      <text x='50' y='62' font-size='40' text-anchor='middle' fill='white'>🔢</text>
+    </svg>">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Arrays & Loops — Min / Max Visualizer</h1>
+
+      <label for="numbers" class="hint">Enter numbers separated by commas or spaces</label>
+      <input id="numbers" type="text" placeholder="e.g. 10, 5, 8, 20" autocomplete="off">
+
+      <div class="button-row">
+        <button id="findMinBtn" class="btn min-btn" type="button">Find Min</button>
+        <button id="findMaxBtn" class="btn max-btn" type="button">Find Max</button>
+        <button id="showArrBtn" class="btn neutral-btn" type="button">Show Array</button>
+      </div>
+
+      <div id="arrayBox" class="array-box" aria-live="polite"></div>
+
+      <div id="result" class="result" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  background: #f4f4f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background: #004080;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Main Sections */
+main {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.intro button {
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 1rem;
+}
+
+.intro button:hover {
+  background: #e68a00;
+}
+
+/* Faculty Section */
+.faculty {
+  margin-bottom: 30px;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.faculty-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Student Table */
+.students table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.students th, .students td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.students th {
+  background: #004080;
+  color: white;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #004080;
+  color: white;
+  margin-top: 20px;
+}

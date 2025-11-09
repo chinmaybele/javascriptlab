@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link the external CSS file -->
+    <link rel="stylesheet" href="practical_11.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    
+    <div class="w-full max-w-md bg-white p-8 rounded-xl shadow-2xl text-center">
+        <h2 class="text-2xl font-bold text-gray-700 mb-6">
+            Class Countdown
+        </h2>
+        <p class="text-sm text-gray-500 mb-8">Time remaining until the next period begins.</p>
+
+        <!-- Dynamic Timer Display -->
+        <div id="timerContainer" class="p-8 bg-indigo-50 rounded-xl mb-8 border-4 border-indigo-200">
+            <h1 id="timer" class="text-8xl font-black text-indigo-600">
+                10
+            </h1>
+            <p id="timerLabel" class="mt-2 text-xl font-medium text-indigo-400">Seconds</p>
+        </div>
+
+        <button id="resetButton"
+                class="bg-gray-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-gray-600 transition duration-200 ease-in-out focus:outline-none focus:ring-4 focus:ring-gray-300 focus:ring-opacity-50">
+            Reset Timer
+        </button>
+    </div>
+
+    <!-- Custom Toast/Message Box Area -->
+    <div id="toastArea" class="fixed bottom-0 right-0 p-4 md:p-6 z-50 pointer-events-none">
+        <!-- Toast messages will be injected here -->
+    </div>
+
+    <!-- Link the external JavaScript file -->
+    <script src="practical_11.js" type="module"></script>
+</body>
+</html>
